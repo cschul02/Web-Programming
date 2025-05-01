@@ -51,7 +51,37 @@ function validateEnrollForm(event) {
         return;
     }
 
-    alert(`Enrollment Submitted:\nName: ${firstName} ${lastName}\nYear: ${year}\nMajor: ${major || "Undeclared"}\nEmail: ${email}`);
+    // Send data to the server using fetch
+    fetch('enroll_student.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            firstname: firstName,
+            lastname: lastName,
+            year: year,
+            major: major,
+            email: email
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Enrollment successful!");
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('display-name').textContent = `${firstName} ${lastName}`;
+            document.getElementById('display-year').textContent = year;
+            document.getElementById('display-major').textContent = major || "Undeclared";
+            document.getElementById('display-email').textContent = email;
+        } else {
+            alert("Error: " + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred while enrolling the student.");
+    });
 }
 
 function validateInstructorForm(event) {
