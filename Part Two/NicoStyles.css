@@ -68,19 +68,19 @@ footer {
 
 
 /* trying stuff*/
-.enrollstud {
+form {
     display: flex;
     flex-direction: column;
     width: 300px; 
     margin: 20px; 
 }
 
-.enrollstud label {
+form label {
     margin-top: 10px; 
 }
 
-.enrollstud input,
-.enrollstud select {
+form input,
+form select {
     width: 100%; 
     padding: 8px;
     margin-top: 5px;
@@ -88,7 +88,7 @@ footer {
     border-radius: 5px;
 }
 
-.enrollstud button {
+form button {
     margin-top: 15px;
     padding: 10px;
     background-color: #007BFF;
@@ -98,7 +98,7 @@ footer {
     cursor: pointer;
 }
 
-.enrollstud button:hover {
+form button:hover {
     background-color: #0056b3;
 }
 
