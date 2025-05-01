@@ -12,17 +12,20 @@
         section { margin-bottom: 30px; }
         h2 { border-bottom: 2px solid #333; padding-bottom: 5px; }
     </style>
+    
 </head>
 <body>
     <nav>
+        <a href="Nico.html">Home Page</a>
         <a href="#user-manual">User Manual</a>
         <a href="#programmer-manual">Programmer Manual</a>
     </nav>
+    
     <div class="container">
         
         <section id="user-manual">
             <h2>User Manual</h2>
-            <p>Welcome to the Course Registration System. This manual will guide you through the system.</p>
+            <p>Welcome to the Course Registration System. This manual will provide and overview of the system.</p>
             
             <h3>Navigation Menu</h3>
             <ul>
@@ -32,23 +35,33 @@
             </ul>
             
             <h3 id="overview">Overview</h3>
-            <p>The Course Registration System allows students to enroll in courses, view schedules, and manage registrations.</p>
+            <p>The course registration system allows students to enroll in courses, view schedules, and manage registrations.
+                The home page is the base of operations for the site, each page has a link back to the home page so that you can
+                do each step of the process as needed. There are six tabs, enroll student, add instructor, register course, add course, drop course, and the manuals.
+            </p>
             
             <h3 id="pages-summary">Web Pages Summary</h3>
             <ul>
-                <li><b>Home Page:</b> Login and introduction.</li>
-                <li><b>Course Listings:</b> View available courses.</li>
-                <li><b>Registration Page:</b> Register for courses.</li>
-                <li><b>Schedule Page:</b> View registered courses.</li>
+                <li><b>Home Page:</b> Location of all links relevant to registering for classes at Marietta College</li>
+                <li><b>Enroll Student Page:</b> This page is where a student can enroll for classes and verify that they are eligible.</li>
+                <li><b>Add Instructor:</b> This page is were you would look at what professors you want for to take or what they are teaching.</li>
+                <li><b>Add Course:</b> This page is dedicated to searching for available courses based on days of the week a class is available and the time its offered.</li>
+                <li><b>Register Course:</b> This page is were a student would register for classes. </li>
+                <li><b>Drop Course:</b> This is were a student would request to drop a class. </li>
+                
             </ul>
             
             <h3 id="detailed-pages">Detailed Page Descriptions</h3>
-            <h4>Registration Page</h4>
-            <p>The registration page contains the following fields:</p>
-            <ul>
-                <li><b>Student ID:</b> Enter numeric values (e.g., 123456).</li>
-                <li><b>Course Code:</b> Enter course codes (e.g., CS101).</li>
-            </ul>
+            <h4>Course Registration System Pages</h4>
+            <p>The registration system contains the six pages listed above. Each page has a ton of different fields, but each one is labeled with what is the intended input.
+                The home page is the home base, its where the navigation bar is and the introduction to the site. The next page is the enroll student page, here we have fields
+                for first/last name, major, grade level, and email address. The next page is where an instructor is added, so this page has first/last name, professor rank, department, and email.
+                The third page is for adding a course, and this page has alot of fields for the user, such as the class semester, course number, course name, what time its offered, what days of the week its offered.
+                This page contains alot of information, but its all labeled with what the intended input is. The register course page is similar, but its just the student first/last name, the semester and year of the course,
+                and the course id number. The fifth page is for dropping a course, so fields are course number, semester and time taken, and the students first/last name.
+
+            </p>
+
         </section>
 
         <section id="programmer-manual">
@@ -63,19 +76,36 @@
             </ul>
             
             <h3 id="tech-overview">Technical Overview</h3>
-            <p>The system is built using HTML, CSS, JavaScript for frontend, and PHP/MySQL for backend.</p>
+            <p>The system is built using HTML, CSS, JavaScript for frontend, and PHP/MySQL for backend. The current system is only a series of HTML
+                pages
+            </p>
             
             <h3 id="pages-summary-tech">Web Pages Summary</h3>
             <ul>
                 <li><b>index.html:</b> Home page with login functionality.</li>
-                <li><b>courses.html:</b> Displays available courses.</li>
-                <li><b>register.html:</b> Contains course registration form.</li>
+                <li><b>enrollment.html:</b> This page is where a student would enroll. </li>
+                <li><b>instructor.html:</b> This page is were a student would pick a professor.</li>
+                <li><b>addcourse.html:</b> This page is dedicated to adding a course to a students schedule.</li>
+                <li><b>registercourse.html:</b> Course registration page, so this page contains all the course information so the student can add it to their schedule. </li>
+                <li><b>dropcourse.html</b> Drop course page, this is were you would request to drop a course from your schedule</li>
             </ul>
             
-            <h3 id="functions">Functions</h3>
-            <h4>registerCourse()</h4>
-            
+            <h3 id="functions">Page Functions</h3>
+                <p>In this section of the manual, we are going to dive into detail on how the site functions. The pages all follow a similar format, they have input boxes
+                    for individual user information. Page by page they are structured the same, the enrollment and instructor page contains fields for first and last names, 
+                    which are just input boxes. Since theres no backend (for now), some of the inputs will be invalid in the future. For example, the register page and enrollment
+                    page need a list of majors and there respective acronyms that are acceptable.
+                </p>
+
+                <p>
+                    Generally, there are quite a view drop down forms for the user, so the classes are at specific times and taught on specific days. Some of the fields that are provided
+                    are left to be unique for the user, with names, email, and major being a few. The forms are all set up the same, with a label for the box and a tag for whats supposed to go there.
+                    The drop down menus are also within that form, so its setup in a way that is consistent across the pages. 
+
+                </p>
+
         </section>
     </div>
+    
 </body>
 </html>
