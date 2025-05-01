@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$user = "root";        // your MySQL username
-$password = "";        // your MySQL password
+$user = "root";      
+$password = "";        
 $dbname = "CourseRegistration";
 
 // Create connection
@@ -26,8 +26,8 @@ $conn->select_db($dbname);
 // Create Students table
 $sql = "CREATE TABLE IF NOT EXISTS Students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name NVARCHAR(50) NOT NULL,
-    last_name NVARCHAR(50) NOT NULL,
+    firstname NVARCHAR(50) NOT NULL,
+    lastname NVARCHAR(50) NOT NULL,
     year NVARCHAR(20) NOT NULL,
     major NVARCHAR(50) NOT NULL,
     email NVARCHAR(100) NOT NULL
