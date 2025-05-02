@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Manuals</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 10px; text-decoration: none; }
+        section { margin-bottom: 30px; }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 5px; }
+        pre { background: #f4f4f4; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Nico.html">Home Page</a>
+        <a href="#user-manual">User Manual</a>
+        <a href="#programmer-manual">Programmer Manual</a>
+        <a href="#view-courses">View Courses</a>
+        <a href="#view-students">View Students</a>
+    </nav>
+    
+    <div class="container">
+        
+        <section id="user-manual">
+            <h2>User Manual</h2>
+            <p>Welcome to the Course Registration System. This manual will provide an overview of the system.</p>
+            
+            <h3>Navigation Menu</h3>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#pages-summary">Web Pages Summary</a></li>
+                <li><a href="#detailed-pages">Detailed Page Descriptions</a></li>
+                <li><a href="#view-courses">View Courses Page</a></li>
+                <li><a href="#view-students">View Students Page</a></li>
+            </ul>
+            
+            <h3 id="overview">Overview</h3>
+            <p>The course registration system allows students to enroll in courses, view schedules, and manage registrations.
+                The home page is the base of operations for the site. There are six tabs: Enroll Student, Add Instructor, Register Course, Add Course, Drop Course, and the Manuals.
+            </p>
+            
+            <h3 id="pages-summary">Web Pages Summary</h3>
+            <ul>
+                <li><b>Home Page:</b> Location of all links relevant to registering for classes at Marietta College</li>
+                <li><b>Enroll Student Page:</b> Where students can enroll and verify eligibility.</li>
+                <li><b>Add Instructor:</b> Choose and view instructors and their teaching schedules.</li>
+                <li><b>Add Course:</b> Search for available courses based on schedule and timing.</li>
+                <li><b>Register Course:</b> Where a student registers for classes.</li>
+                <li><b>Drop Course:</b> Where a student requests to drop a class.</li>
+            </ul>
+            
+            <h3 id="detailed-pages">Detailed Page Descriptions</h3>
+            <p>The registration system includes six main pages, each containing labeled fields for user input. The forms collect data such as student/instructor details, course attributes, and registration requests.</p>
+
+            <h3 id="view-courses">View Courses Page</h3>
+            <p>This page allows users to view a list of courses based on a selected student or instructor. After choosing an option, the relevant list will appear. Upon selection, course information is displayed in a table, including name, time, days, credits, and instructor. If no results are found, a message will be shown.</p>
+
+            <h3 id="view-students">View Students Page</h3>
+            <p>This page displays students registered in a specific course or in all courses for a selected semester. After choosing how to view, select from a list of available courses or semesters. A table shows each student's name, major, year, email, and course details if applicable. Missing data triggers a message.</p>
+        </section>
+
+        <section id="programmer-manual">
+            <h2>Programmer Manual</h2>
+            <p>This manual provides technical details for developers maintaining the system.</p>
+            
+            <h3>Navigation Menu</h3>
+            <ul>
+                <li><a href="#tech-overview">Technical Overview</a></li>
+                <li><a href="#pages-summary-tech">Web Pages Summary</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#database-tables">Database Tables</a></li>
+                <li><a href="#new-page-functions">New Page Functions</a></li>
+            </ul>
+            
+            <h3 id="tech-overview">Technical Overview</h3>
+            <p>The system is built using HTML, CSS, JavaScript for frontend, and PHP/MySQL for backend. The current system is a series of HTML pages that will be modified to include database interaction.</p>
+            
+            <h3 id="pages-summary-tech">Web Pages Summary</h3>
+            <ul>
+                <li><b>index.html:</b> Home page with navigation and introductory content.</li>
+                <li><b>enrollment.html:</b> Student enrollment form.</li>
+                <li><b>instructor.html:</b> Add instructor information.</li>
+                <li><b>addcourse.html:</b> Add new course details.</li>
+                <li><b>registercourse.html:</b> Register a student for a course.</li>
+                <li><b>dropcourse.html:</b> Drop a student from a course.</li>
+            </ul>
+            
+            <h3 id="functions">Page Functions</h3>
+            <p>Each page includes input forms with clearly labeled fields. JavaScript is used for client-side validation. PHP scripts will process form data and interact with the database. Form structure is consistent across all pages.</p>
+
+            <h3 id="database-tables">Database Tables</h3>
+            <ul>
+                <li><b>Students:</b>
+                    <ul>
+                        <li>student_id (int, PK, auto-increment)</li>
+                        <li>first_name (nvarchar, NOT NULL)</li>
+                        <li>last_name (nvarchar, NOT NULL)</li>
+                        <li>email (nvarchar, NOT NULL)</li>
+                        <li>major (nvarchar, NOT NULL)</li>
+                        <li>grade_level (nvarchar, NOT NULL)</li>
+                    </ul>
+                </li>
+                <li><b>Instructors:</b>
+                    <ul>
+                        <li>instructor_id (int, PK, auto-increment)</li>
+                        <li>first_name (nvarchar, NOT NULL)</li>
+                        <li>last_name (nvarchar, NOT NULL)</li>
+                        <li>email (nvarchar, NOT NULL)</li>
+                        <li>department (nvarchar, NOT NULL)</li>
+                        <li>rank (nvarchar, NOT NULL)</li>
+                    </ul>
+                </li>
+                <li><b>Courses:</b>
+                    <ul>
+                        <li>course_id (int, PK, auto-increment)</li>
+                        <li>course_prefix (nvarchar, NOT NULL)</li>
+                        <li>course_number (nvarchar, NOT NULL)</li>
+                        <li>course_name (nvarchar, NOT NULL)</li>
+                        <li>semester (nvarchar, NOT NULL)</li>
+                        <li>days (nvarchar, NOT NULL)</li>
+                        <li>time (nvarchar, NOT NULL)</li>
+                        <li>room (nvarchar, NOT NULL)</li>
+                        <li>credit_hours (int, NOT NULL)</li>
+                        <li>instructor_id (int, FK)</li>
+                    </ul>
+                </li>
+                <li><b>Registration:</b>
+                    <ul>
+                        <li>registration_id (int, PK, auto-increment)</li>
+                        <li>student_id (int, FK)</li>
+                        <li>course_id (int, FK)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 id="new-page-functions">New Page Functions</h3>
+
+            <h4>view_courses.php</h4>
+            <p>
+                User selects to view by student or instructor.<br>
+                Fetch names via:
+                <pre>
+SELECT student_id, CONCAT(first_name, ' ', last_name) FROM Students;
+SELECT instructor_id, CONCAT(first_name, ' ', last_name) FROM Instructors;
+                </pre>
+                After selection, show registered/taught courses:
+                <pre>
+-- For student:
+SELECT C.course_prefix, C.course_number, C.course_name, C.days, C.time, C.room, C.credit_hours, 
+       I.first_name, I.last_name
+FROM Courses C
+JOIN Registration R ON C.course_id = R.course_id
+JOIN Instructors I ON C.instructor_id = I.instructor_id
+WHERE R.student_id = ?;
+
+-- For instructor:
+SELECT * FROM Courses WHERE instructor_id = ?;
+                </pre>
+                JavaScript handles which list to show.
+            </p>
+
+            <h
