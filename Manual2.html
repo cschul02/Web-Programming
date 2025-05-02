@@ -97,11 +97,11 @@
                 <li><b>Students:</b>
                     <ul>
                         <li>student_id (int, PK, auto-increment)</li>
-                        <li>first_name (nvarchar, NOT NULL)</li>
-                        <li>last_name (nvarchar, NOT NULL)</li>
-                        <li>email (nvarchar, NOT NULL)</li>
+                        <li>firstname (nvarchar, NOT NULL)</li>
+                        <li>lastname (nvarchar, NOT NULL)</li>
+                        <li>rank (nvarchar, NOT NULL)</li>
+                        <li>dept (nvarchar, NOT NULL)</li>
                         <li>major (nvarchar, NOT NULL)</li>
-                        <li>grade_level (nvarchar, NOT NULL)</li>
                     </ul>
                 </li>
                 <li><b>Instructors:</b>
@@ -116,23 +116,29 @@
                 </li>
                 <li><b>Courses:</b>
                     <ul>
-                        <li>course_id (int, PK, auto-increment)</li>
                         <li>course_prefix (nvarchar, NOT NULL)</li>
                         <li>course_number (nvarchar, NOT NULL)</li>
+                        <li>course_section (nvarchar, NOT NULL)</li>
                         <li>course_name (nvarchar, NOT NULL)</li>
                         <li>semester (nvarchar, NOT NULL)</li>
+                        <li>room (nvarchar, NOT NULL)</li>
                         <li>days (nvarchar, NOT NULL)</li>
                         <li>time (nvarchar, NOT NULL)</li>
-                        <li>room (nvarchar, NOT NULL)</li>
                         <li>credit_hours (int, NOT NULL)</li>
-                        <li>instructor_id (int, FK)</li>
+                        <li>instructor_first_name (nvarchar, NOT NULL)</li>
+                        <li>instructor_last_name (nvarchar, NOT NULL)</li>
+                        <li>enrollment_cap (int, NOT NULL)</li>
                     </ul>
                 </li>
                 <li><b>Registration:</b>
                     <ul>
-                        <li>registration_id (int, PK, auto-increment)</li>
-                        <li>student_id (int, FK)</li>
-                        <li>course_id (int, FK)</li>
+                        <li>first_name (nvarchar, NOT NULL)</li>
+                        <li>last_name (nvarchar, NOT NULL)</li>
+                        <li>semester (int, FK)</li>
+                        <li>course_prefix (int, FK)</li>
+                        <li>course_number (int, FK)</li>
+                        <li>course_section (int, FK)</li>
+                        </li>
                     </ul>
                 </li>
             </ul>
